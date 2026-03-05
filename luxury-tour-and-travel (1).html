@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#050507">
+<title>Luxury Tour & Travel — Premium Car Rental Ranchi, Jharkhand</title>
+<meta name="description" content="Luxury Tour & Travel offers premium car rental in Ranchi, Jharkhand. Book BMW, Audi, Mercedes, Fortuner, Innova Crysta for airport transfers, weddings, outstation trips & corporate travel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   CSS VARIABLES
+   ============================================= */
+:root {
+  --black: #050507;
+  --deep: #0d0d10;
+  --surface: #141418;
+  --card: #1c1c22;
+  --border: #2c2c35;
+  --red: #c0392b;
+  --red-bright: #e74c3c;
+  --gold: #d4a843;
+  --gold-light: #f0c867;
+  --text: #f0f0f5;
+  --muted: #888899;
+  --sub: #555566;
+
+  /* Spacing scale */
+  --sp-xs: clamp(8px, 2vw, 12px);
+  --sp-sm: clamp(12px, 3vw, 20px);
+  --sp-md: clamp(20px, 4vw, 36px);
+  --sp-lg: clamp(40px, 6vw, 80px);
+  --sp-xl: clamp(60px, 8vw, 110px);
+
+  /* Section padding */
+  --section-pad: clamp(60px, 8vw, 110px) 0;
+
+  /* Container */
+  --container: min(1200px, 100%);
+  --container-pad: clamp(16px, 5vw, 60px);
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; }
+
+/* Hide custom cursor on touch devices */
+.cursor, .cursor-ring { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  .cursor {
+    display: block;
+    width: 10px; height: 10px;
+    background: var(--red-bright);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s;
+  }
+  .cursor-ring {
+    display: block;
+    width: 34px; height: 34px;
+    border: 1px solid rgba(192,57,43,0.6);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.15s ease;
+  }
+}
+
+/* =============================================
+   CONTAINER
+   ============================================= */
+.wrap {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: clamp(12px,2vw,20px) var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(5,5,7,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(192,57,43,0.15);
+  transition: all 0.3s;
+}
+nav.scrolled { background: rgba(5,5,7,0.98); }
+
+.nav-logo { display: flex; flex-direction: column; line-height: 1.2; flex-shrink: 0; }
+.nav-logo .brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 3vw, 1.45rem);
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+.nav-logo .sub-loc {
+  font-size: clamp(7px, 1.5vw, 9px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 36px);
+  list-style: none;
+}
+.nav-links a {
+  color: var(--muted);
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: white; }
+.nav-cta {
+  background: var(--red) !important;
+  color: white !important;
+  padding: clamp(8px,1vw,10px) clamp(14px,2vw,22px) !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--red-bright) !important; }
+
+/* Hamburger — mobile only */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(5,5,7,0.98);
+  z-index: 1050;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 8vw, 2.4rem);
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .m-cta {
+  background: var(--red);
+  padding: 14px 40px;
+  border-radius: 6px;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero {
+  min-height: 100svh;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-slides { position: absolute; inset: 0; }
+.hero-slide {
+  position: absolute; inset: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  background-size: cover;
+  background-position: center;
+}
+.hero-slide.active { opacity: 1; }
+.slide-1 { background: radial-gradient(ellipse at 70% 40%, #3d0a0a 0%, #1a0505 40%, #0a0a0f 100%); }
+.slide-2 { background: radial-gradient(ellipse at 30% 60%, #0a0a20 0%, #0d0d22 40%, #050510 100%); }
+.slide-3 { background: radial-gradient(ellipse at 60% 30%, #1a1000 0%, #0f0a00 40%, #050507 100%); }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 50%, rgba(192,57,43,0.07) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(5,5,7,0.2) 0%, rgba(5,5,7,0.4) 50%, rgba(5,5,7,0.97) 100%);
+}
+.hero-texture {
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(192,57,43,0.01) 2px, rgba(192,57,43,0.01) 4px);
+  pointer-events: none;
+}
+
+/* Floating car bg — hidden on small screens */
+.hero-car-bg {
+  position: absolute;
+  right: -40px; bottom: 80px;
+  font-size: clamp(140px, 25vw, 320px);
+  opacity: 0.08;
+  animation: carFloat 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 60px rgba(192,57,43,0.5));
+  display: none;
+}
+@media (min-width: 600px) { .hero-car-bg { display: block; } }
+@keyframes carFloat {
+  0%,100%{ transform: translateY(0) translateX(0); }
+  50%{ transform: translateY(-20px) translateX(-10px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: clamp(20px, 5vw, 40px) clamp(16px, 5vw, 40px);
+  width: 100%;
+  max-width: 900px;
+  animation: fadeUp 1.2s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(9px, 2vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: clamp(16px, 3vw, 28px);
+  animation: fadeUp 1s 0.15s ease both;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: block;
+  width: clamp(18px, 3vw, 32px); height: 1px;
+  background: var(--gold); opacity: 0.6;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 10vw, 7rem);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: clamp(8px, 2vw, 14px);
+  animation: fadeUp 1s 0.25s ease both;
+}
+.hero-title .red { color: var(--red-bright); font-weight: 600; }
+.hero-title .italic { font-style: italic; color: rgba(255,255,255,0.7); }
+
+.hero-sub-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 4vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: clamp(12px, 3vw, 22px);
+  animation: fadeUp 1s 0.35s ease both;
+}
+
+.hero-loc {
+  font-size: clamp(10px, 2vw, 13px);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: clamp(28px, 5vw, 48px);
+  animation: fadeUp 1s 0.45s ease both;
+}
+.hero-loc span { color: var(--red-bright); }
+
+.hero-btns {
+  display: flex;
+  gap: clamp(10px, 2vw, 16px);
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 1s 0.55s ease both;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--red);
+  color: white;
+  padding: clamp(12px,2vw,15px) clamp(20px,4vw,36px);
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(12px,2vw,14px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s;
+  box-shadow: 0 0 40px rgba(192,57,43,0.3);
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--red-bright); transform: translateY(-2px); box-shadow: 0 0 60px rgba(231,76,60,0.4); }
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  padding: clamp(12px,2vw,15px) clamp(20px,4vw,36px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 5px;
+  font-size: clamp(12px,2vw,14px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+/* Car ticker */
+.car-ticker {
+  position: absolute;
+  bottom: clamp(60px,10vw,100px);
+  left: 0; right: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-top: 1px solid rgba(192,57,43,0.2);
+  border-bottom: 1px solid rgba(192,57,43,0.2);
+  padding: 10px 0;
+  background: rgba(5,5,7,0.6);
+  backdrop-filter: blur(8px);
+}
+.ticker-track {
+  display: flex;
+  gap: 40px;
+  animation: ticker 20s linear infinite;
+  width: max-content;
+}
+@keyframes ticker { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+.ticker-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(11px,2vw,14px);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: center; gap: 14px;
+  white-space: nowrap;
+}
+.ticker-item::after { content:'◆'; font-size:5px; color:var(--red); }
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: clamp(12px,3vw,28px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: bounce 2.5s ease infinite;
+}
+.scroll-hint span { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sub); }
+.scroll-line { width: 1px; height: 36px; background: linear-gradient(180deg, var(--red), transparent); }
+@keyframes bounce {
+  0%,100%{transform:translateX(-50%) translateY(0);}
+  50%{transform:translateX(-50%) translateY(8px);}
+}
+
+/* =============================================
+   SECTIONS BASE
+   ============================================= */
+section { padding: var(--section-pad); }
+
+.section-label {
+  font-size: clamp(9px, 1.5vw, 10px);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red-bright);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before {
+  content: ''; display: block;
+  width: 20px; height: 1px; background: var(--red-bright);
+}
+.section-label.center { justify-content: center; }
+.section-label.center::before { display: none; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: white;
+  margin-bottom: 14px;
+}
+.section-title em { font-style: italic; color: var(--gold-light); }
+.section-desc {
+  color: var(--muted);
+  font-size: clamp(13px,2vw,15px);
+  line-height: 1.85;
+  font-weight: 300;
+  max-width: 520px;
+}
+.section-desc.center { margin: 0 auto; text-align: center; }
+
+/* =============================================
+   SERVICES
+   ============================================= */
+#services { background: var(--deep); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 2px;
+  margin-top: var(--sp-lg);
+  border: 1px solid var(--border);
+}
+
+.service-card {
+  background: var(--surface);
+  padding: clamp(24px,4vw,40px) clamp(20px,3vw,36px);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  border-bottom: 1px solid var(--border);
+}
+.service-card:hover { background: var(--card); }
+.service-card::after {
+  content:''; position:absolute; bottom:0;left:0;right:0;
+  height:2px; background:var(--red);
+  transform:scaleX(0); transition:transform 0.3s; transform-origin:left;
+}
+.service-card:hover::after { transform:scaleX(1); }
+
+.svc-num {
+  position:absolute; top:16px; right:20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:300;
+  color:rgba(255,255,255,0.04);
+  line-height:1;
+}
+.svc-icon { font-size: clamp(28px,4vw,36px); margin-bottom: 16px; display: block; }
+.svc-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.1rem,2.5vw,1.4rem);
+  font-weight:600; color:white; margin-bottom:8px;
+}
+.svc-desc { font-size:clamp(12px,1.8vw,13.5px); color:var(--muted); line-height:1.75; font-weight:300; }
+
+/* =============================================
+   CELEBRITIES
+   ============================================= */
+#celebrities { background: var(--black); position:relative; overflow:hidden; }
+#celebrities::before {
+  content:''; position:absolute;
+  top:-150px;left:-150px; width:500px;height:500px;
+  background:radial-gradient(circle,rgba(192,57,43,0.06),transparent 70%);
+  pointer-events:none;
+}
+
+.celeb-header { text-align:center; margin-bottom:var(--sp-lg); }
+.celeb-header .section-desc { margin:0 auto; text-align:center; }
+
+.celeb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: clamp(12px,2vw,20px);
+}
+
+.celeb-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:8px; overflow:hidden; position:relative;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.celeb-card:hover { transform:translateY(-6px); box-shadow:0 20px 60px rgba(192,57,43,0.2); border-color:rgba(192,57,43,0.4); }
+
+.celeb-img-box {
+  aspect-ratio: 4/3;
+  display:flex; align-items:center; justify-content:center;
+  font-size:clamp(50px,10vw,80px);
+  position:relative; overflow:hidden;
+}
+.celeb-img-box::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(5,5,7,0.9) 100%);
+}
+.celeb-tag {
+  position:absolute; top:12px; left:12px;
+  background:var(--red); color:white;
+  font-size:clamp(9px,1.5vw,10px); font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase;
+  padding:4px 10px; border-radius:3px; z-index:2;
+}
+.celeb-info { padding: clamp(14px,2vw,20px) clamp(14px,2vw,22px); }
+.celeb-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1rem,2.5vw,1.2rem);
+  font-weight:600; color:white; margin-bottom:3px;
+}
+.celeb-role { font-size:clamp(10px,1.5vw,12px); color:var(--gold); letter-spacing:0.06em; }
+
+.upload-note {
+  text-align:center; margin-top:var(--sp-md);
+  padding:clamp(16px,3vw,24px) clamp(16px,4vw,32px);
+  background:rgba(212,168,67,0.06);
+  border:1px dashed rgba(212,168,67,0.3);
+  border-radius:8px;
+  font-size:clamp(13px,2vw,14px); color:var(--gold);
+}
+.upload-note strong { display:block; margin-bottom:5px; font-size:clamp(14px,2vw,15px); }
+
+/* =============================================
+   FLEET
+   ============================================= */
+#fleet { background: var(--deep); }
+
+.fleet-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-md);
+  margin-bottom: var(--sp-lg);
+  flex-wrap: wrap;
+}
+
+.fleet-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  background:transparent; border:1px solid var(--border);
+  color:var(--muted);
+  padding:clamp(6px,1vw,9px) clamp(12px,2vw,18px);
+  border-radius:100px;
+  font-size:clamp(11px,1.5vw,12px); font-weight:500;
+  letter-spacing:0.06em; cursor:pointer; transition:all 0.2s;
+  font-family:'Outfit',sans-serif;
+}
+.filter-btn.active, .filter-btn:hover { background:var(--red); border-color:var(--red); color:white; }
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(14px,2vw,24px);
+}
+
+.car-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden;
+  transition:all 0.3s; position:relative;
+}
+.car-card:hover { transform:translateY(-6px); box-shadow:0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(192,57,43,0.3); }
+
+.car-img {
+  aspect-ratio:16/9;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.car-audi .car-img { background:linear-gradient(135deg,#0f0f14,#1a0a0a); }
+.car-bmw  .car-img { background:linear-gradient(135deg,#0a0a0f,#0a1020); }
+.car-merc .car-img { background:linear-gradient(135deg,#0a0a0f,#151a10); }
+.car-fortuner .car-img { background:linear-gradient(135deg,#100a00,#1a1000); }
+.car-crysta .car-img { background:linear-gradient(135deg,#0a100a,#0f1a0a); }
+.car-swift .car-img { background:linear-gradient(135deg,#0a0a10,#10080a); }
+
+.car-img-icon {
+  font-size:clamp(60px,10vw,80px);
+  filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+  transition:transform 0.4s;
+}
+.car-card:hover .car-img-icon { transform:scale(1.08) translateX(5px); }
+
+.car-badge {
+  position:absolute; top:12px; right:12px;
+  background:rgba(5,5,7,0.85); border:1px solid var(--border);
+  border-radius:4px; padding:4px 10px;
+  font-size:clamp(9px,1.5vw,11px); font-weight:700;
+  color:var(--gold); letter-spacing:0.08em;
+  backdrop-filter:blur(8px);
+}
+.car-badge.premium { border-color:var(--gold); }
+
+.car-info { padding: clamp(16px,3vw,24px); }
+.car-brand {
+  font-size:clamp(9px,1.5vw,11px); letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--red-bright);
+  font-weight:600; margin-bottom:3px;
+}
+.car-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.15rem,2.5vw,1.5rem);
+  font-weight:600; color:white; margin-bottom:10px;
+}
+.car-specs {
+  display:flex; gap:12px; flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.spec { font-size:clamp(10px,1.5vw,12px); color:var(--muted); display:flex; align-items:center; gap:4px; }
+
+.car-price {
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:14px; border-top:1px solid var(--border);
+  gap:10px; flex-wrap:wrap;
+}
+.price-val {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(0.95rem,2vw,1.1rem);
+  color:var(--gold-light); font-weight:600;
+}
+.book-now {
+  background:var(--red); color:white; border:none;
+  padding:clamp(8px,1.5vw,10px) clamp(14px,2vw,20px);
+  border-radius:4px;
+  font-size:clamp(10px,1.5vw,12px); font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase;
+  cursor:pointer; transition:all 0.2s;
+  font-family:'Outfit',sans-serif; white-space:nowrap;
+}
+.book-now:hover { background:var(--red-bright); transform:translateY(-1px); }
+
+/* =============================================
+   REVIEWS
+   ============================================= */
+#reviews { background: var(--black); }
+
+.reviews-header { text-align:center; margin-bottom:var(--sp-lg); }
+
+.stars-avg {
+  display:flex; align-items:center; justify-content:center;
+  gap:16px; margin-top:14px; flex-wrap:wrap;
+}
+.big-stars { font-size:clamp(16px,3vw,22px); letter-spacing:3px; }
+.avg-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,5vw,3rem); font-weight:300; color:white; line-height:1;
+}
+.avg-sub { font-size:clamp(10px,1.5vw,12px); color:var(--muted); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(14px,2vw,20px);
+}
+
+.review-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:10px; padding:clamp(20px,3vw,28px);
+  transition:transform 0.25s;
+}
+.review-card:hover { transform:translateY(-4px); border-color:rgba(192,57,43,0.3); }
+
+.review-quote {
+  font-size:clamp(32px,5vw,48px); line-height:0.6;
+  color:var(--red); opacity:0.4; font-family:Georgia,serif; margin-bottom:12px;
+}
+.review-text {
+  font-size:clamp(12px,1.8vw,14px); color:var(--text);
+  line-height:1.8; font-weight:300; margin-bottom:18px; font-style:italic;
+}
+.review-meta { display:flex; align-items:center; gap:12px; }
+.reviewer-avatar {
+  width:clamp(36px,5vw,42px); height:clamp(36px,5vw,42px);
+  border-radius:50%; background:var(--surface);
+  display:flex; align-items:center; justify-content:center;
+  font-size:clamp(14px,2.5vw,18px); border:2px solid var(--border); flex-shrink:0;
+}
+.reviewer-name { font-weight:600; font-size:clamp(12px,1.8vw,14px); color:white; }
+.reviewer-trip { font-size:clamp(10px,1.5vw,11px); color:var(--muted); margin-top:2px; }
+.review-stars { font-size:clamp(11px,1.5vw,13px); margin-top:4px; letter-spacing:2px; }
+
+/* =============================================
+   WHY US
+   ============================================= */
+#why { background: var(--deep); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-lg);
+}
+@media (min-width: 900px) {
+  .why-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+}
+
+.why-points { margin-top:var(--sp-md); display:flex; flex-direction:column; gap:clamp(18px,3vw,28px); }
+.why-point { display:flex; gap:clamp(12px,2vw,18px); align-items:flex-start; }
+.why-icon {
+  width:clamp(38px,5vw,44px); height:clamp(38px,5vw,44px);
+  background:rgba(192,57,43,0.1); border:1px solid rgba(192,57,43,0.25);
+  border-radius:8px; display:flex; align-items:center; justify-content:center;
+  font-size:clamp(15px,2.5vw,18px); flex-shrink:0;
+}
+.why-pt-title { font-weight:600; font-size:clamp(13px,2vw,15px); margin-bottom:4px; }
+.why-pt-desc { font-size:clamp(11px,1.8vw,13px); color:var(--muted); line-height:1.7; }
+
+.why-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px,2vw,16px);
+}
+.stat-box {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:10px; padding:clamp(20px,3vw,30px) clamp(16px,2.5vw,24px);
+  text-align:center;
+}
+@media (min-width: 900px) {
+  .stat-box:nth-child(2) { margin-top:24px; }
+  .stat-box:nth-child(4) { margin-top:-24px; }
+}
+.stat-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,5vw,3rem); font-weight:300; color:white; line-height:1;
+}
+.stat-num span { color:var(--red-bright); }
+.stat-label { font-size:clamp(10px,1.5vw,12px); color:var(--muted); margin-top:5px; letter-spacing:0.05em; }
+
+/* =============================================
+   CONTACT
+   ============================================= */
+#contact { background: var(--black); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-lg);
+}
+@media (min-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+.contact-info { display:flex; flex-direction:column; gap:clamp(20px,3vw,32px); margin-top:var(--sp-md); }
+.contact-item { display:flex; gap:clamp(12px,2vw,16px); align-items:flex-start; }
+.contact-icon {
+  width:clamp(40px,5vw,46px); height:clamp(40px,5vw,46px);
+  background:rgba(192,57,43,0.1); border:1px solid rgba(192,57,43,0.25);
+  border-radius:8px; display:flex; align-items:center; justify-content:center;
+  font-size:clamp(16px,2.5vw,18px); flex-shrink:0;
+}
+.contact-label { font-size:clamp(9px,1.5vw,11px); letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:3px; }
+.contact-val { font-size:clamp(13px,2.5vw,16px); font-weight:500; color:white; }
+.contact-val a { color:white; }
+.contact-val a:hover { color:var(--gold); }
+
+.contact-form-box {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:clamp(24px,4vw,40px);
+}
+.form-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,3vw,1.8rem); font-weight:600; margin-bottom:var(--sp-md); color:white;
+}
+.form-row { display:flex; gap:12px; flex-wrap:wrap; }
+.form-row .form-group { flex:1; min-width:140px; }
+.form-group { margin-bottom:14px; }
+.form-group label {
+  display:block; font-size:clamp(9px,1.5vw,11px);
+  letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);
+  margin-bottom:7px; font-weight:600;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; background:var(--surface); border:1px solid var(--border);
+  border-radius:6px; padding:clamp(10px,2vw,13px) 14px;
+  color:white; font-family:'Outfit',sans-serif;
+  font-size:clamp(13px,2vw,14px); outline:none; transition:border-color 0.2s;
+  -webkit-appearance: none; appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color:var(--red); }
+.form-group select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:36px; }
+.form-group select option { background:var(--surface); color:white; }
+.form-group textarea { height:clamp(80px,12vw,100px); resize:vertical; }
+.form-submit {
+  width:100%; background:var(--red); color:white; border:none;
+  padding:clamp(13px,2vw,15px);
+  border-radius:6px; font-family:'Outfit',sans-serif;
+  font-size:clamp(12px,2vw,14px); font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase;
+  cursor:pointer; margin-top:6px; transition:all 0.25s;
+  box-shadow:0 0 30px rgba(192,57,43,0.3);
+}
+.form-submit:hover { background:var(--red-bright); box-shadow:0 0 50px rgba(231,76,60,0.4); }
+
+/* =============================================
+   FLOATING BUTTONS
+   ============================================= */
+.floating-contact {
+  position:fixed;
+  bottom:clamp(20px,3vw,32px);
+  right:clamp(16px,3vw,32px);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:clamp(10px,1.5vw,14px);
+  align-items:flex-end;
+}
+.float-btn {
+  width:clamp(48px,6vw,56px); height:clamp(48px,6vw,56px);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:clamp(18px,3vw,22px);
+  cursor:pointer; border:none;
+  box-shadow:0 6px 24px rgba(0,0,0,0.5);
+  transition:all 0.25s; position:relative;
+  text-decoration:none;
+}
+.float-btn:hover { transform:scale(1.12); }
+.float-wa { background:#25d366; }
+.float-call { background:var(--red); }
+.float-label {
+  position:absolute; right:calc(100% + 12px);
+  background:rgba(5,5,7,0.94); border:1px solid var(--border);
+  color:white; padding:6px 12px; border-radius:6px;
+  font-size:clamp(10px,1.5vw,12px); font-weight:600;
+  white-space:nowrap; opacity:0; pointer-events:none;
+  transition:opacity 0.2s; backdrop-filter:blur(8px);
+}
+.float-btn:hover .float-label { opacity:1; }
+.float-pulse {
+  position:absolute; inset:-5px; border-radius:50%;
+  border:2px solid #25d366; opacity:0.5;
+  animation:pulse 2s ease infinite;
+}
+@keyframes pulse { 0%{transform:scale(1);opacity:0.5;} 100%{transform:scale(1.6);opacity:0;} }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer { background:var(--deep); border-top:1px solid var(--border); padding-top:clamp(40px,6vw,60px); }
+
+.footer-grid {
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 var(--container-pad) clamp(32px,5vw,48px);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(32px,4vw,48px);
+  border-bottom:1px solid var(--border);
+}
+@media (min-width:600px)  { .footer-grid { grid-template-columns:1fr 1fr; } }
+@media (min-width:1000px) { .footer-grid { grid-template-columns:2fr 1fr 1fr 1fr; } }
+
+.footer-brand .brand-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.3rem,3vw,1.6rem); font-weight:600; color:white; margin-bottom:3px;
+}
+.footer-brand .brand-sub {
+  font-size:clamp(9px,1.5vw,11px); letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:14px;
+}
+.footer-brand p {
+  font-size:clamp(12px,1.8vw,13.5px); color:var(--muted);
+  line-height:1.8; max-width:280px; font-weight:300;
+}
+
+.social-row { display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
+.social-btn {
+  display:flex; align-items:center; gap:7px;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:8px; padding:clamp(7px,1.5vw,9px) clamp(10px,2vw,16px);
+  color:var(--muted); font-size:clamp(11px,1.8vw,13px); font-weight:500;
+  transition:all 0.2s;
+}
+.social-btn:hover { border-color:var(--gold); color:var(--gold); }
+.social-icon { font-size:clamp(14px,2.5vw,18px); }
+
+.footer-col h4 {
+  font-size:clamp(9px,1.5vw,11px); font-weight:700;
+  letter-spacing:0.18em; text-transform:uppercase; color:white; margin-bottom:16px;
+}
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
+.footer-col ul li a {
+  font-size:clamp(12px,1.8vw,13.5px); color:var(--muted); font-weight:300; transition:color 0.2s;
+}
+.footer-col ul li a:hover { color:var(--gold); }
+
+.footer-bottom {
+  max-width:var(--container); margin:0 auto;
+  padding:clamp(14px,2vw,20px) var(--container-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:10px;
+}
+.footer-copy { font-size:clamp(10px,1.5vw,12px); color:var(--sub); }
+.footer-tagline {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(11px,1.8vw,13px); font-style:italic; color:var(--sub);
+}
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+
+/* =============================================
+   SAFE OVERFLOW / EDGE FIXES
+   ============================================= */
+* { max-width: 100%; }
+.ticker-track, .ticker-item { max-width: none; }
+.hero-title, .section-title { word-break: break-word; hyphens: auto; }
+</style>
+</head>
+<body>
+
+<!-- Custom cursor (desktop only) -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#fleet" onclick="closeMenu()">Our Fleet</a>
+  <a href="#celebrities" onclick="closeMenu()">Celebrity Trust</a>
+  <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#contact" class="m-cta" onclick="closeMenu()">📞 Book Now</a>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <span class="brand">Luxury Tour &amp; Travel</span>
+    <span class="sub-loc">Premium Car Rental · Ranchi</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#fleet">Fleet</a></li>
+    <li><a href="#celebrities">Celebrity Trust</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-slides">
+      <div class="hero-slide slide-1 active"></div>
+      <div class="hero-slide slide-2"></div>
+      <div class="hero-slide slide-3"></div>
+    </div>
+    <div class="hero-car-bg">🚗</div>
+    <div class="hero-overlay"></div>
+    <div class="hero-texture"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Ranchi's Most Trusted Premium Car Rental</div>
+    <h1 class="hero-title">
+      <span class="italic">Experience</span><br>
+      <span class="red">Luxury</span> on Every Road
+    </h1>
+    <p class="hero-sub-title">Where Prestige Meets the Journey</p>
+    <p class="hero-loc">Serving <span>Ranchi, Jharkhand</span> &amp; Pan India Outstation</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hello! I want to book a premium car from Luxury Tour and Travel Ranchi." class="btn-primary" target="_blank">
+        💬 WhatsApp to Book
+      </a>
+      <a href="#fleet" class="btn-outline">
+        🚗 View Our Fleet
+      </a>
+    </div>
+  </div>
+
+  <div class="car-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Audi A6</span>
+      <span class="ticker-item">BMW 5 Series</span>
+      <span class="ticker-item">Mercedes E-Class</span>
+      <span class="ticker-item">Toyota Fortuner</span>
+      <span class="ticker-item">Innova Crysta</span>
+      <span class="ticker-item">Mercedes S-Class</span>
+      <span class="ticker-item">BMW 7 Series</span>
+      <span class="ticker-item">Audi Q7</span>
+      <span class="ticker-item">Toyota Camry</span>
+      <span class="ticker-item">Range Rover</span>
+      <span class="ticker-item">Audi A6</span>
+      <span class="ticker-item">BMW 5 Series</span>
+      <span class="ticker-item">Mercedes E-Class</span>
+      <span class="ticker-item">Toyota Fortuner</span>
+      <span class="ticker-item">Innova Crysta</span>
+      <span class="ticker-item">Mercedes S-Class</span>
+      <span class="ticker-item">BMW 7 Series</span>
+      <span class="ticker-item">Audi Q7</span>
+      <span class="ticker-item">Toyota Camry</span>
+      <span class="ticker-item">Range Rover</span>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Every Journey,<br><em>Perfectly Served</em></h2>
+      <p class="section-desc">From airport pickups to grand wedding processions — we have the right luxury vehicle and chauffeur for every occasion in Jharkhand.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <span class="svc-num">01</span>
+        <span class="svc-icon">✈️</span>
+        <div class="svc-title">Airport Transfers</div>
+        <p class="svc-desc">Punctual rides to/from Birsa Munda Airport. Greet-and-meet service. Available 24/7 for all flights.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="svc-num">02</span>
+        <span class="svc-icon">💍</span>
+        <div class="svc-title">Wedding Car Rental</div>
+        <p class="svc-desc">Make your special day unforgettable. Floral decorations available. Audi, BMW, Mercedes for the perfect Baraat entry.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <span class="svc-num">03</span>
+        <span class="svc-icon">🛣️</span>
+        <div class="svc-title">Outstation Trips</div>
+        <p class="svc-desc">Ranchi to Patna, Kolkata, Varanasi, Delhi — long-distance travel in supreme comfort. No surprise billing.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="svc-num">04</span>
+        <span class="svc-icon">💼</span>
+        <div class="svc-title">Corporate Travel</div>
+        <p class="svc-desc">Fleet solutions for companies. Monthly billing available. Professional chauffeurs for your executive team.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="svc-num">05</span>
+        <span class="svc-icon">🎉</span>
+        <div class="svc-title">Baraati &amp; Events</div>
+        <p class="svc-desc">Grand baraat entries with a convoy of premium vehicles. Multiple luxury cars for a statement your guests never forget.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <span class="svc-num">06</span>
+        <span class="svc-icon">🗺️</span>
+        <div class="svc-title">Personal &amp; Leisure Trips</div>
+        <p class="svc-desc">Pilgrimage, hill station getaways, sightseeing around Jharkhand. Hire by hour, day or week. Fully flexible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CELEBRITIES ===== -->
+<section id="celebrities">
+  <div class="wrap">
+    <div class="celeb-header reveal">
+      <div class="section-label center">Star Trust</div>
+      <h2 class="section-title" style="text-align:center;">Trusted by <em>India's Finest</em></h2>
+      <p class="section-desc center">When India's celebrities visit Ranchi &amp; Jharkhand, they trust Luxury Tour &amp; Travel. Proud moments that define our reputation.</p>
+    </div>
+    <div class="celeb-grid">
+      <div class="celeb-card reveal reveal-delay-1">
+        <div class="celeb-tag">⭐ Celebrity Guest</div>
+        <div class="celeb-img-box" style="background:linear-gradient(135deg,#1a0a05,#2d1510,#0f0f14);">
+          <span style="position:relative;z-index:1;">🎤</span>
+        </div>
+        <div class="celeb-info">
+          <div class="celeb-name">Shaan</div>
+          <div class="celeb-role">Bollywood Playback Singer</div>
+        </div>
+      </div>
+      <div class="celeb-card reveal reveal-delay-2">
+        <div class="celeb-tag">⭐ Celebrity Guest</div>
+        <div class="celeb-img-box" style="background:linear-gradient(135deg,#050f1a,#0a1a2d,#0f0f14);">
+          <span style="position:relative;z-index:1;">🎵</span>
+        </div>
+        <div class="celeb-info">
+          <div class="celeb-name">Aditya Narayan</div>
+          <div class="celeb-role">Singer &amp; TV Host</div>
+        </div>
+      </div>
+      <div class="celeb-card reveal reveal-delay-3">
+        <div class="celeb-tag">⭐ VIP Guest</div>
+        <div class="celeb-img-box" style="background:linear-gradient(135deg,#0f1a05,#1a2d10,#0f1410);">
+          <span style="position:relative;z-index:1;">🏏</span>
+        </div>
+        <div class="celeb-info">
+          <div class="celeb-name">VIP Guests</div>
+          <div class="celeb-role">Sports &amp; Entertainment Personalities</div>
+        </div>
+      </div>
+      <div class="celeb-card reveal reveal-delay-1">
+        <div class="celeb-tag">⭐ Add Your Photo</div>
+        <div class="celeb-img-box" style="background:linear-gradient(135deg,#1a1505,#2d2510,#14100f);">
+          <span style="position:relative;z-index:1;">🎬</span>
+        </div>
+        <div class="celeb-info">
+          <div class="celeb-name">Your Photo Here</div>
+          <div class="celeb-role">Upload Celebrity / VIP Photos</div>
+        </div>
+      </div>
+    </div>
+    <div class="upload-note reveal">
+      <strong>📸 Replace These with Your Real Celebrity Photos &amp; Videos</strong>
+      You have photos and videos with Shaan, Aditya Narayan and other famous personalities. Upload those real images here to build massive trust with new customers visiting your website.
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLEET ===== -->
+<section id="fleet">
+  <div class="wrap">
+    <div class="fleet-header-row">
+      <div class="reveal">
+        <div class="section-label">Our Collection</div>
+        <h2 class="section-title">The Premium <em>Fleet</em></h2>
+        <p class="section-desc">Every vehicle is meticulously maintained, sanitised before each trip, and driven by professional chauffeurs.</p>
+      </div>
+      <div class="fleet-filter reveal">
+        <button class="filter-btn active" onclick="filterCars('all',this)">All</button>
+        <button class="filter-btn" onclick="filterCars('luxury',this)">Luxury</button>
+        <button class="filter-btn" onclick="filterCars('suv',this)">SUV</button>
+        <button class="filter-btn" onclick="filterCars('sedan',this)">Sedan</button>
+      </div>
+    </div>
+    <div class="fleet-grid" id="fleetGrid">
+
+      <div class="car-card car-audi" data-cat="luxury">
+        <div class="car-img">
+          <span class="car-img-icon">🚗</span>
+          <span class="car-badge premium">PREMIUM</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">Audi</div>
+          <div class="car-name">Audi A6 / A8</div>
+          <div class="car-specs">
+            <span class="spec">🪑 4 Seater</span>
+            <span class="spec">❄️ Climate AC</span>
+            <span class="spec">🎵 Premium Audio</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Outstation / Local / Wedding</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book Audi A6/A8" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card car-bmw" data-cat="luxury">
+        <div class="car-img">
+          <span class="car-img-icon">🚙</span>
+          <span class="car-badge premium">PREMIUM</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">BMW</div>
+          <div class="car-name">BMW 5 / 7 Series</div>
+          <div class="car-specs">
+            <span class="spec">🪑 4 Seater</span>
+            <span class="spec">❄️ Climate AC</span>
+            <span class="spec">🛡️ Safety Suite</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Outstation / Corporate / Events</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book BMW 5/7 Series" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card car-merc" data-cat="luxury">
+        <div class="car-img">
+          <span class="car-img-icon">🚘</span>
+          <span class="car-badge premium">ULTRA LUX</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">Mercedes-Benz</div>
+          <div class="car-name">E-Class / S-Class</div>
+          <div class="car-specs">
+            <span class="spec">🪑 4 Seater</span>
+            <span class="spec">❄️ Climate AC</span>
+            <span class="spec">👑 VIP Class</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Wedding / Corporate / VIP</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book Mercedes E/S Class" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card car-fortuner" data-cat="suv">
+        <div class="car-img">
+          <span class="car-img-icon">🚐</span>
+          <span class="car-badge">SUV</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Fortuner</div>
+          <div class="car-specs">
+            <span class="spec">🪑 7 Seater</span>
+            <span class="spec">❄️ Climate AC</span>
+            <span class="spec">🛣️ Off-Road</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Outstation / Group Travel</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book Toyota Fortuner" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card car-crysta" data-cat="suv">
+        <div class="car-img">
+          <span class="car-img-icon">🚌</span>
+          <span class="car-badge">POPULAR</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Innova Crysta</div>
+          <div class="car-specs">
+            <span class="spec">🪑 7 Seater</span>
+            <span class="spec">❄️ Climate AC</span>
+            <span class="spec">🧳 Large Boot</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Family / Pilgrim / Outstation</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book Innova Crysta" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card car-swift" data-cat="sedan">
+        <div class="car-img">
+          <span class="car-img-icon">🚖</span>
+          <span class="car-badge">CAB</span>
+        </div>
+        <div class="car-info">
+          <div class="car-brand">Sedan / Cab</div>
+          <div class="car-name">Swift Dzire / Ciaz</div>
+          <div class="car-specs">
+            <span class="spec">🪑 4 Seater</span>
+            <span class="spec">❄️ Full AC</span>
+            <span class="spec">💰 Budget-Friendly</span>
+          </div>
+          <div class="car-price">
+            <div>
+              <div class="price-val">Call for Price</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px;">Local / Airport / Daily</div>
+            </div>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book a Sedan Cab" class="book-now" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="reviews-header reveal">
+      <div class="section-label center">What Clients Say</div>
+      <h2 class="section-title" style="text-align:center;">Real Reviews, <em>Real Journeys</em></h2>
+      <div class="stars-avg">
+        <div class="big-stars">⭐⭐⭐⭐⭐</div>
+        <div>
+          <div class="avg-num">4.9</div>
+          <div class="avg-sub">Based on 200+ trips</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-quote">"</div>
+        <p class="review-text">Booked BMW 5 Series for my wedding and it was absolutely stunning. Driver was professional, on time, and the car was spotless. Made our special day even more memorable.</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👨</div>
+          <div>
+            <div class="reviewer-name">Rahul Sharma</div>
+            <div class="reviewer-trip">Wedding Car · Ranchi</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-quote">"</div>
+        <p class="review-text">Used Innova Crysta for our family trip from Ranchi to Varanasi. Very comfortable, driver was helpful and knew all routes well. Will definitely book again!</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👩</div>
+          <div>
+            <div class="reviewer-name">Priya Verma</div>
+            <div class="reviewer-trip">Outstation Trip · Varanasi</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-3">
+        <div class="review-quote">"</div>
+        <p class="review-text">Our company uses Luxury Tour &amp; Travel for all executive airport transfers. The Mercedes is top class. Billing is clean and transparent. Highly recommend for corporate clients.</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👨‍💼</div>
+          <div>
+            <div class="reviewer-name">Ashok Kumar</div>
+            <div class="reviewer-trip">Corporate Travel · Ranchi</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-quote">"</div>
+        <p class="review-text">Hired Fortuner for a group trip to Deoghar. Spacious, AC was excellent, driver was polite. Booking was super easy on WhatsApp. Best car rental in Jharkhand!</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👨</div>
+          <div>
+            <div class="reviewer-name">Sanjay Mishra</div>
+            <div class="reviewer-trip">Pilgrimage · Deoghar</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-quote">"</div>
+        <p class="review-text">The Audi for our baraati was the highlight of the whole wedding! Everyone took photos. They decorated it beautifully with flowers. Absolutely fabulous service!</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👰</div>
+          <div>
+            <div class="reviewer-name">Neha Singh</div>
+            <div class="reviewer-trip">Baraat · Hazaribagh</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-3">
+        <div class="review-quote">"</div>
+        <p class="review-text">Late night airport pickup at 2 AM — driver was already waiting! Car was clean, journey was smooth. Very professional service. This is how luxury travel should feel.</p>
+        <div class="review-meta">
+          <div class="reviewer-avatar">👨</div>
+          <div>
+            <div class="reviewer-name">Rohit Pandey</div>
+            <div class="reviewer-trip">Airport Transfer · Birsa Munda Airport</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section id="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="reveal">
+          <div class="section-label">Why Choose Us</div>
+          <h2 class="section-title">Jharkhand's <em>No.1 Choice</em><br>for Premium Travel</h2>
+        </div>
+        <div class="why-points">
+          <div class="why-point reveal reveal-delay-1">
+            <div class="why-icon">⏱️</div>
+            <div>
+              <div class="why-pt-title">Always On Time</div>
+              <div class="why-pt-desc">We track your flight / event schedule and ensure the car is ready before you are. Zero delays, every time.</div>
+            </div>
+          </div>
+          <div class="why-point reveal reveal-delay-2">
+            <div class="why-icon">👨‍✈️</div>
+            <div>
+              <div class="why-pt-title">Professional Chauffeurs</div>
+              <div class="why-pt-desc">All drivers are background-verified, uniformed, courteous and trained for VIP client handling.</div>
+            </div>
+          </div>
+          <div class="why-point reveal reveal-delay-3">
+            <div class="why-icon">🧼</div>
+            <div>
+              <div class="why-pt-title">Spotlessly Clean Vehicles</div>
+              <div class="why-pt-desc">Every car is sanitised, vacuumed and checked before each booking. Premium condition guaranteed.</div>
+            </div>
+          </div>
+          <div class="why-point reveal">
+            <div class="why-icon">💰</div>
+            <div>
+              <div class="why-pt-title">Transparent Pricing</div>
+              <div class="why-pt-desc">No hidden charges. No surprise tolls added later. Fixed quotes discussed before you confirm.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-right reveal">
+        <div class="stat-box">
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">8<span>+</span></div>
+          <div class="stat-label">Years in Service</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">24<span>/7</span></div>
+          <div class="stat-label">Available Round the Clock</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">15<span>+</span></div>
+          <div class="stat-label">Premium Vehicles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Book Your <em>Luxury Ride</em><br>Today</h2>
+          <p class="section-desc">Call, WhatsApp, or fill the form. We respond within minutes. Available 24 hours, 7 days a week.</p>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item reveal">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Call / WhatsApp</div>
+              <div class="contact-val"><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-1">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Based In</div>
+              <div class="contact-val">Ranchi, Jharkhand, India</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-2">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <div class="contact-label">Availability</div>
+              <div class="contact-val">24 Hours · 7 Days · 365 Days</div>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-3">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <div class="contact-label">Service Area</div>
+              <div class="contact-val">Ranchi · Jharkhand · Pan India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal">
+        <div class="form-title">Quick Booking Enquiry</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label>WhatsApp Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Select Vehicle</label>
+          <select>
+            <option value="">-- Choose a Car --</option>
+            <option>Audi A6 / A8</option>
+            <option>BMW 5 / 7 Series</option>
+            <option>Mercedes E-Class / S-Class</option>
+            <option>Toyota Fortuner</option>
+            <option>Innova Crysta</option>
+            <option>Sedan / Cab</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Service Type</label>
+            <select>
+              <option value="">-- Service --</option>
+              <option>Airport Transfer</option>
+              <option>Wedding / Baraat</option>
+              <option>Outstation Trip</option>
+              <option>Corporate Travel</option>
+              <option>Personal / Leisure</option>
+              <option>Daily Cab</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Trip Date</label>
+            <input type="date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea placeholder="From → To location, no. of passengers, special requests..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">🚗 Send Booking Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">Luxury Tour &amp; Travel</div>
+      <div class="brand-sub">Premium Car Rental · Ranchi</div>
+      <p>Ranchi's most trusted luxury car rental service. Serving clients across Jharkhand and pan-India for weddings, corporate travel, airport transfers, and personal journeys.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/YOUR_PAGE" class="social-btn" target="_blank">
+          <span class="social-icon">📘</span> Facebook
+        </a>
+        <a href="https://www.instagram.com/YOUR_HANDLE" class="social-btn" target="_blank">
+          <span class="social-icon">📸</span> Instagram
+        </a>
+        <a href="https://www.youtube.com/@YOUR_CHANNEL" class="social-btn" target="_blank">
+          <span class="social-icon">▶️</span> YouTube
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="social-btn" target="_blank">
+          <span class="social-icon">💬</span> WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Airport Transfers</a></li>
+        <li><a href="#services">Wedding Car Rental</a></li>
+        <li><a href="#services">Outstation Trips</a></li>
+        <li><a href="#services">Corporate Travel</a></li>
+        <li><a href="#services">Baraat Convoy</a></li>
+        <li><a href="#services">Personal Trips</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Fleet</h4>
+      <ul>
+        <li><a href="#fleet">Audi A6 / A8</a></li>
+        <li><a href="#fleet">BMW 5 / 7 Series</a></li>
+        <li><a href="#fleet">Mercedes E / S Class</a></li>
+        <li><a href="#fleet">Toyota Fortuner</a></li>
+        <li><a href="#fleet">Innova Crysta</a></li>
+        <li><a href="#fleet">Sedan / Daily Cab</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul>
+        <li><a href="#contact">Ranchi (Local)</a></li>
+        <li><a href="#contact">Ranchi → Patna</a></li>
+        <li><a href="#contact">Ranchi → Kolkata</a></li>
+        <li><a href="#contact">Ranchi → Varanasi</a></li>
+        <li><a href="#contact">Ranchi → Delhi</a></li>
+        <li><a href="#contact">Ranchi → Deoghar</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Luxury Tour &amp; Travel, Ranchi, Jharkhand. All rights reserved.</div>
+    <div class="footer-tagline">"Where Every Journey Becomes an Experience"</div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="floating-contact">
+  <a href="tel:+91XXXXXXXXXX" class="float-btn float-call">
+    📞
+    <span class="float-label">Call Now</span>
+  </a>
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hello! I want to book a car from Luxury Tour and Travel, Ranchi." class="float-btn float-wa" target="_blank">
+    💬
+    <div class="float-pulse"></div>
+    <span class="float-label">WhatsApp Us</span>
+  </a>
+</div>
+
+<script>
+// Cursor (desktop only)
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+if (cursor) {
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = (e.clientX - 5) + 'px';
+    cursor.style.top  = (e.clientY - 5) + 'px';
+    ring.style.left   = (e.clientX - 17) + 'px';
+    ring.style.top    = (e.clientY - 17) + 'px';
+  });
+}
+
+// Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn   = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Hero slideshow
+let slide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+setInterval(() => {
+  slides[slide].classList.remove('active');
+  slide = (slide + 1) % slides.length;
+  slides[slide].classList.add('active');
+}, 5000);
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const observer  = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+revealEls.forEach(el => observer.observe(el));
+
+// Fleet filter
+function filterCars(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.car-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+
+// Form submit → WhatsApp redirect
+function submitForm() {
+  const name    = document.querySelector('input[type=text]').value || 'Customer';
+  const phone   = document.querySelector('input[type=tel]').value  || 'not provided';
+  const vehicle = document.querySelectorAll('select')[0].value     || 'not selected';
+  const service = document.querySelectorAll('select')[1].value     || 'not selected';
+  const date    = document.querySelector('input[type=date]').value || 'not provided';
+  const msg     = document.querySelector('textarea').value         || '';
+  const text    = encodeURIComponent(
+    `Hello! I want to book a car.\n\nName: ${name}\nPhone: ${phone}\nVehicle: ${vehicle}\nService: ${service}\nDate: ${date}\nMessage: ${msg}\n\n— via Luxury Tour & Travel website`
+  );
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, '_blank');
+}
+</script>
+</body>
+</html>
